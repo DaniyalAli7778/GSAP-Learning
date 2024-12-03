@@ -36,7 +36,7 @@ ease:"elastic.out(1.2,0.2)"
  const main2 =document.querySelector("#main2");
 
  const cursour =document.querySelector(".cursour");
-
+const imagediv= document.querySelector('#image');
  main2.addEventListener("mousemove",function(e){
      gsap.to(cursour,{
       x:e.x,
@@ -59,3 +59,19 @@ ease:"elastic.out(1.2,0.2)"
     }
 
   })
+
+
+  image.addEventListener("mouseenter",function(){
+    cursour.innerHTML="View More"
+    gsap.to(cursour,{
+      scale:2,
+    })
+   })
+
+
+   image.addEventListener("mouseleave",function(){
+    cursour.innerHTML="",
+    gsap.to(cursour,{
+      scale:1,
+    })
+   })

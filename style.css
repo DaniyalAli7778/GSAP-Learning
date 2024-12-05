@@ -212,18 +212,22 @@ justify-content: center;
   align-items: center;
   justify-content: center;
    padding: 1.5vw 1.5vw;
-   gap: 5vw;
+   gap: 2svw;
 }
 
 .move .marquee{
-flex-shrink: 0;
+  flex-shrink: 0;
   color: rgb(0, 0, 0);
   display:flex;
    align-items: center;
   justify-content: center;
-  gap: 3vw;
+  gap: 1vw;
 }
-
+.marquee h1{
+font-size: 2vw;
+width:min-content;
+white-space: nowrap;
+}
 .marquee img{
  width: 3vw;
    font-size: 3vw;

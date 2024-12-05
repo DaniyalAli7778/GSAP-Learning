@@ -28,6 +28,8 @@ String.addEventListener("mouseleave", function (dets) {
  
 })
 
+
+
 // SVG animation end
 
 // CURSOUR animation starts heres
@@ -192,7 +194,49 @@ delay:0.5,
 })
 
 
-window.addEventListener("wheel",function(){
-  console.log("heyyyy");
+
+
+function whellAnimation(){
+
+const move= document.querySelector(".page5")
+  move.addEventListener("wheel",function(event){
+    console.log(event.deltaY);
+    if(event.deltaY>0){
+  const marquee =document.querySelector(".move .marquee");
+  gsap.to(".marquee",{
+    transform:"translateX(100%)",
+    duration:2,
+    repeat:-1,
+  ease:"none",
+  scrollTrigger:{
+    trigger:"marquee",
+    scroller:"body",
   
-})
+  }
+   })
+  
+   gsap.to(".marquee img",{
+    rotate:180,
+    duration:1,
+   })
+    }else{
+      gsap.to(".marquee",{
+        transform:"translateX(-100%)",
+        duration:2,
+        repeat:-1,
+      ease:"none",    
+      scrollTrigger:{
+        trigger:"marquee",
+        scroller:"body",
+      
+      }
+    });
+    gsap.to(".marquee img",{
+      rotate:0,
+      duration:1,
+     })
+  }})
+  
+
+}
+whellAnimation();

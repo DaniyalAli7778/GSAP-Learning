@@ -13,7 +13,7 @@ String.addEventListener("mousemove", function (dets) {
     duration: 0.2,
     ease: "power3.out"
   })
-  console.log(path);
+ 
 })
 
 
@@ -23,9 +23,9 @@ String.addEventListener("mouseleave", function (dets) {
   gsap.to("svg path", {
     attr: { d: finalPath },
     duration: 1.5,
-    ease: "elastic.out(1.2,0.2)"
+    ease: "elastic.out(1.2,0.1)"
   })
-  console.log(path);
+ 
 })
 
 // SVG animation end
@@ -158,8 +158,7 @@ function breakTheText() {
 
 
   h1.innerHTML = cullter;
-  console.log(splittedText);
-  console.log(cullter);
+ 
 
 }
 
@@ -172,7 +171,10 @@ gsap.from("h1 .a",{
 stagger:0.3,
 delay:0.5,
   opacity:0,
-
+scrollTrigger:{
+  trigger:"h1 .a",
+  scroller:"body",
+  }
 
 })
 
@@ -182,8 +184,15 @@ gsap.from("h1 .b",{
 stagger:-0.3,
 delay:0.5,
   opacity:0,
-
+  scrollTrigger:{
+    trigger:"h1 .a",
+    scroller:"body",
+    }
 
 })
 
 
+window.addEventListener("wheel",function(){
+  console.log("heyyyy");
+  
+})

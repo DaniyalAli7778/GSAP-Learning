@@ -1,13 +1,12 @@
- let path =`M 10 80 Q 580 80 1160 80`;
+ let path =`M 10 80 Q 580 80 1200 80`;
 
- let finalPath=`M 10 80 Q 580 100 1160 80`;
+ let finalPath=`M 10 80 Q 580 100 1200 80`;
  
 
  let String=document.querySelector('#string');
-
-
+ 
  String.addEventListener("mousemove",function(dets){
-  path =`M 10 80 Q  ${dets.x} ${dets.y} 1160 80`
+  path =`M 10 80 Q  ${dets.x} ${dets.y} 1200 80`
 
   gsap.to("svg path",{
     attr:{d:path},
@@ -34,7 +33,7 @@ ease:"elastic.out(1.2,0.2)"
  // CURSOUR animation starts heres
 
  const main2 =document.querySelector("#main2");
-
+ 
  const cursour =document.querySelector(".cursour");
 const imagediv= document.querySelector('#image');
  main2.addEventListener("mousemove",function(e){
@@ -45,13 +44,14 @@ const imagediv= document.querySelector('#image');
      })
   
  })
-  gsap.to("#textAnimation h1",{
+
+
+  gsap.to("#textAnimation1 h1",{
     transform:"translateX(-200%)",
     scrollTrigger:{
-      trigger:"#textAnimation ",
+      trigger:"#textAnimation1 ",
       scroller:"body",
-      markers:true,
-      start:"top 0%",
+       start:"top 0%",
       end:"top -150%",
       scrub:2,
        pin:true,
@@ -60,7 +60,19 @@ const imagediv= document.querySelector('#image');
 
   })
 
+  gsap.to("#textAnimation2 h1",{
+    transform:"translateX(-200%)",
+    scrollTrigger:{
+      trigger:"#textAnimation2 ",
+      scroller:"body",
+       start:"top 0%",
+      end:"top -150%",
+      scrub:2,
+       pin:true,
+       
+    }
 
+  })
   image.addEventListener("mouseenter",function(){
     cursour.innerHTML="View More"
     gsap.to(cursour,{
@@ -75,3 +87,48 @@ const imagediv= document.querySelector('#image');
       scale:1,
     })
    })
+
+
+   const menue =document.querySelector('nav i');
+   menue.addEventListener('click',function(){
+    const fulldiv= document.querySelector('.full');
+fulldiv.style.display="inline-block";
+var tl1 =gsap.timeline();
+
+tl1.to(".full",{
+ right:"0%",
+duration:0.77,
+ })
+
+
+ gsap.from(".full h4",{
+  x:150,
+  duration:0.7,
+  stagger:0.28,
+  opacity:0,
+ })
+ gsap.from(".full i",{
+  x:-10,
+   opacity:0,
+   duration:0.77,
+   delay:0.28,
+   stagger:1,
+  })
+
+
+   })
+
+
+
+   const close =document.querySelector('.full i');
+   close.addEventListener('click',function(){
+
+   
+    const fulldiv= document.querySelector('.full');
+    fulldiv.style.display="none";
+
+  
+
+   })
+
+

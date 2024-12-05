@@ -24,7 +24,7 @@ body {
     width: 100%;
   }
  #string{
-  height: 700px;
+  height: 500px;
    width: 100%;
     }
  svg{
@@ -34,7 +34,7 @@ body {
  
  
  #main2{
-  height: 100%;
+  height: 115%;
   width: 100%;
  
   }
@@ -59,15 +59,15 @@ body {
   }
 
 
-  #textAnimation{
+  #textAnimation1{
      height:  100% ;
-background-color:rgb(82, 82, 82);
+
+background-color:rgb(47, 47, 47);
  color: #000;
   
  }
-#textAnimation h1{
-  padding-top:15%;
- 
+#textAnimation1 h1{
+ padding-top: 15%; 
     font-size: 30vw;
   font-weight: regular 400;
   color: #000;
@@ -75,6 +75,22 @@ background-color:rgb(82, 82, 82);
   font-family:Playfair   ;
  }
 
+ #textAnimation2{
+  height:  100% ;
+
+background-color:rgb(47, 47, 47);
+color: #000;
+
+}
+#textAnimation2 h1{
+padding-top:15%;
+
+ font-size: 30vw;
+font-weight: regular 400;
+color: #000;
+white-space: nowrap;
+font-family:Playfair   ;
+}
  #image{
   height: 400px;
   width: 600px;
@@ -99,3 +115,63 @@ background-color:rgb(82, 82, 82);
   background: transparent;
   z-index: 10;
  }
+
+ .main3{
+  height: 100%;
+  width: 100%;
+  background:  rgb(0, 0, 0);
+
+  background-image: url(https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position:center;
+  position: relative;
+ }
+
+ nav{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 50px;
+ }
+
+ nav h1{
+font-size: 30px;
+font-weight: 400;
+ }
+ nav i{
+  font-size: 20px;
+ }
+
+
+ .full{
+   position:  absolute;
+  top: 0%;
+  right: -40%;
+  z-index: 9;
+  height: 688px;
+  width: 500px;
+  background:  rgba(255, 255, 255, 0.544);
+  padding: 40px 50px ;
+  backdrop-filter: blur(10px);
+  
+}
+
+  .full h4{
+    color: #000;
+    margin-bottom:20px;
+  }
+
+.full i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background:  white;
+  position:absolute;
+  top: 1%;
+  right: 1%;
+  color: #000;
+}
